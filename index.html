@@ -1,0 +1,525 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioTech Solutions - Innovating Life Through Science</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-lg border-b border-gray-200/50 nav-animate">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center logo-animate">
+                    <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-green-600 rounded-lg mr-3"></div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+                        BioTech Solutions
+                    </span>
+                </div>
+
+                <!-- Navigation Items -->
+                <div class="hidden md:flex space-x-8 nav-items-animate">
+                    <button onclick="scrollToSection('home')" class="nav-item relative px-3 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors duration-300">
+                        Home
+                    </button>
+                    <button onclick="scrollToSection('about')" class="nav-item relative px-3 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors duration-300">
+                        About Us
+                    </button>
+                    <button onclick="scrollToSection('research')" class="nav-item relative px-3 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors duration-300">
+                        Research
+                    </button>
+                    <button onclick="scrollToSection('products')" class="nav-item relative px-3 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors duration-300">
+                        Products
+                    </button>
+                    <button onclick="scrollToSection('contact')" class="nav-item relative px-3 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors duration-300">
+                        Contact
+                    </button>
+                </div>
+
+                <!-- Auth Buttons -->
+                <div class="flex items-center space-x-3 auth-buttons-animate">
+                                            <button class="px-4 py-2 border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white rounded-lg transition-all duration-300">
+                            Get Started
+                        </button>
+                        <button onclick="openLoginModal()" class="px-4 py-2 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white rounded-lg transition-all duration-300 flex items-center gap-2 hover:scale-105 transform">
+                            <span>🔐</span>
+                            Login
+                        </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-green-50">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0">
+            <div class="dna-helix absolute top-20 right-20 w-64 h-64 opacity-10">
+                <svg viewBox="0 0 100 100" class="w-full h-full">
+                    <path class="dna-path-1" d="M20,50 Q50,10 80,50 Q50,90 20,50" stroke="url(#gradient1)" stroke-width="2" fill="none"/>
+                    <path class="dna-path-2" d="M20,50 Q50,90 80,50 Q50,10 20,50" stroke="url(#gradient2)" stroke-width="2" fill="none"/>
+                    <defs>
+                        <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#3B82F6" />
+                            <stop offset="100%" stop-color="#10B981" />
+                        </linearGradient>
+                        <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#10B981" />
+                            <stop offset="100%" stop-color="#3B82F6" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- Floating Molecules -->
+            <div class="molecule molecule-1 absolute w-4 h-4 bg-gradient-to-r from-blue-400 to-green-400 rounded-full opacity-20"></div>
+            <div class="molecule molecule-2 absolute w-4 h-4 bg-gradient-to-r from-blue-400 to-green-400 rounded-full opacity-20"></div>
+            <div class="molecule molecule-3 absolute w-4 h-4 bg-gradient-to-r from-blue-400 to-green-400 rounded-full opacity-20"></div>
+            <div class="molecule molecule-4 absolute w-4 h-4 bg-gradient-to-r from-blue-400 to-green-400 rounded-full opacity-20"></div>
+            <div class="molecule molecule-5 absolute w-4 h-4 bg-gradient-to-r from-blue-400 to-green-400 rounded-full opacity-20"></div>
+            <div class="molecule molecule-6 absolute w-4 h-4 bg-gradient-to-r from-blue-400 to-green-400 rounded-full opacity-20"></div>
+
+            <!-- Gradient Wave -->
+            <div class="gradient-wave absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-blue-100/50 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="hero-content">
+                <h1 class="hero-title text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 bg-clip-text text-transparent">
+                    Innovating Life
+                    <br>
+                    <span class="hero-subtitle block">Through Science</span>
+                </h1>
+
+                <p class="hero-description text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                    Pioneering breakthrough biotechnology solutions that transform healthcare, 
+                    agriculture, and environmental sustainability for a better tomorrow.
+                </p>
+
+                <div class="hero-buttons flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <button class="px-8 py-3 text-lg bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white rounded-lg transition-all duration-300 transform hover:scale-105">
+                        Explore Our Research
+                    </button>
+                    <button class="px-8 py-3 text-lg border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white rounded-lg transition-all duration-300">
+                        Watch Demo
+                    </button>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator absolute bottom-8 left-1/2 transform -translate-x-1/2">
+                <div class="w-6 h-10 border-2 border-blue-600 rounded-full flex justify-center">
+                    <div class="scroll-dot w-1 h-3 bg-blue-600 rounded-full mt-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 section-animate">
+                <h2 class="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+                    About BioTech Solutions
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Leading the biotechnology revolution with cutting-edge research and innovative solutions
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="about-content">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Our Mission</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        We are dedicated to advancing human health and environmental sustainability through 
+                        groundbreaking biotechnology research. Our team of world-class scientists and researchers 
+                        work tirelessly to develop solutions that address the most pressing challenges of our time.
+                    </p>
+                    <div class="grid grid-cols-3 gap-4 text-center">
+                        <div class="p-4">
+                            <div class="text-3xl font-bold text-blue-600 mb-2">15+</div>
+                            <div class="text-sm text-gray-600">Years Experience</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="text-3xl font-bold text-green-600 mb-2">200+</div>
+                            <div class="text-sm text-gray-600">Research Projects</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">50+</div>
+                            <div class="text-sm text-gray-600">Publications</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image relative">
+                    <div class="bg-gradient-to-br from-blue-100 to-green-100 rounded-2xl p-8 h-80 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-6xl mb-4">🧬</div>
+                            <p class="text-gray-600">Laboratory Illustration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 section-animate">
+                <h2 class="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+                    Research Areas
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Pioneering research across multiple disciplines to advance biotechnology
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="research-card p-6 bg-gradient-to-br from-white to-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center text-white text-2xl mb-4">
+                        🧬
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Gene Therapy</h3>
+                    <p class="text-gray-600 leading-relaxed">Revolutionary treatments targeting genetic disorders at their source</p>
+                </div>
+
+                <div class="research-card p-6 bg-gradient-to-br from-white to-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center text-white text-2xl mb-4">
+                        💊
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Drug Discovery</h3>
+                    <p class="text-gray-600 leading-relaxed">AI-powered pharmaceutical research accelerating medicine development</p>
+                </div>
+
+                <div class="research-card p-6 bg-gradient-to-br from-white to-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center text-white text-2xl mb-4">
+                        🔬
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Biomarkers</h3>
+                    <p class="text-gray-600 leading-relaxed">Advanced diagnostic tools for early disease detection and monitoring</p>
+                </div>
+
+                <div class="research-card p-6 bg-gradient-to-br from-white to-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-gradient-to-r from-teal-500 to-teal-600 rounded-lg flex items-center justify-center text-white text-2xl mb-4">
+                        🛡️
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Immunotherapy</h3>
+                    <p class="text-gray-600 leading-relaxed">Harnessing the immune system to fight cancer and autoimmune diseases</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-gradient-to-br from-blue-50 to-green-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 section-animate">
+                <h2 class="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+                    Our Products
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Innovative biotechnology tools and platforms for researchers and healthcare professionals
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="product-card p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <div class="h-32 bg-gradient-to-br from-blue-100 to-green-100 rounded-lg mb-6 flex items-center justify-center">
+                        <div class="text-4xl">🧪</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">BioAnalyzer Pro</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Advanced genomic sequencing platform with real-time analysis capabilities</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-600">
+                            <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                            High-throughput sequencing
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                            Real-time data processing
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                            Cloud integration
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="product-card p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <div class="h-32 bg-gradient-to-br from-blue-100 to-green-100 rounded-lg mb-6 flex items-center justify-center">
+                        <div class="text-4xl">🧪</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">GeneEdit Suite</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Comprehensive CRISPR gene editing toolkit for research applications</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-600">
+                            <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                            Precision targeting
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                            Safety protocols
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                            Validation tools
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="product-card p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <div class="h-32 bg-gradient-to-br from-blue-100 to-green-100 rounded-lg mb-6 flex items-center justify-center">
+                        <div class="text-4xl">🧪</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">BioMarker Detect</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Early-stage disease detection system using proprietary biomarker technology</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-600">
+                            <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                            Non-invasive testing
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                            Multi-disease screening
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                            AI-powered analysis
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-green-500 rounded-lg mr-3"></div>
+                        <span class="text-2xl font-bold">BioTech Solutions</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 leading-relaxed max-w-md">
+                        Pioneering biotechnology solutions that transform healthcare, agriculture, 
+                        and environmental sustainability for a better tomorrow.
+                    </p>
+                    <div class="space-y-2 text-gray-300">
+                        <div class="flex items-center">
+                            <span class="mr-3">📍</span>
+                            <span>123 Innovation Drive, BioTech Park, CA 94043</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="mr-3">📞</span>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="mr-3">✉️</span>
+                            <span>contact@biotechsolutions.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#research" class="text-gray-300 hover:text-white transition-colors duration-300 hover:underline">Research</a></li>
+                        <li><a href="#products" class="text-gray-300 hover:text-white transition-colors duration-300 hover:underline">Products</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300 hover:underline">Publications</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300 hover:underline">Careers</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300 hover:underline">News</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300 hover:underline">Investors</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Stay Updated</h3>
+                    <p class="text-gray-300 mb-4">
+                        Subscribe to our newsletter for the latest research updates and breakthroughs.
+                    </p>
+                    <div class="space-y-3">
+                        <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400">
+                        <button class="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="border-t border-gray-700 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-gray-400 mb-4 md:mb-0">
+                        © 2024 BioTech Solutions. All rights reserved.
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-blue-600 hover:to-green-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110" title="LinkedIn">
+                            <span class="text-lg">💼</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-blue-600 hover:to-green-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110" title="Twitter">
+                            <span class="text-lg">🐦</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-blue-600 hover:to-green-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110" title="YouTube">
+                            <span class="text-lg">📺</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-blue-600 hover:to-green-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110" title="GitHub">
+                            <span class="text-lg">💻</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="closeLoginModal()"></div>
+
+        <!-- Modal -->
+        <div class="relative bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl p-8 w-full max-w-md border border-white/20 modal-content">
+            <!-- Close button -->
+            <button onclick="closeLoginModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors text-xl">
+                ✕
+            </button>
+
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent mb-2">
+                    Welcome Back
+                </h1>
+                <p class="text-gray-600">Sign in to access your dashboard</p>
+            </div>
+
+            
+
+            <form method="POST" class="space-y-6">
+                <input type="hidden" name="action" value="login">
+                
+                <div class="space-y-2">
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Enter your email" 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" 
+                           required>
+                </div>
+
+                <div class="space-y-2">
+                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <input id="password" name="password" type="password" placeholder="Enter your password" 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" 
+                           required>
+                </div>
+
+                <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105">
+                    Sign In
+                </button>
+            </form>
+
+            <div class="mt-6 text-center">
+                <p class="text-sm text-gray-600 mb-4">
+                    Demo credentials: any email and password
+                </p>
+                <p class="text-sm text-gray-600 mb-3">
+                    Don't have an account?
+                </p>
+                <button onclick="openSignupModal()" class="w-full border border-green-600 text-green-600 hover:bg-green-600 hover:text-white py-2 px-4 rounded-lg transition-all duration-300">
+                    Create New Account
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="closeSignupModal()"></div>
+
+        <!-- Modal -->
+        <div class="relative bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl p-8 w-full max-w-md border border-white/20 max-h-[90vh] overflow-y-auto modal-content">
+            <!-- Close button -->
+            <button onclick="closeSignupModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors text-xl">
+                ✕
+            </button>
+
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent mb-2">
+                    Join BioTech Portal
+                </h1>
+                <p class="text-gray-600">Create your account to get started</p>
+            </div>
+
+            
+
+            <form method="POST" class="space-y-4">
+                <input type="hidden" name="action" value="signup">
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-2">
+                        <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
+                        <input id="firstName" name="firstName" type="text" placeholder="John" 
+                               class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" 
+                               required>
+                    </div>
+                    <div class="space-y-2">
+                        <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name</label>
+                        <input id="lastName" name="lastName" type="text" placeholder="Doe" 
+                               class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" 
+                               required>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <label for="signupEmail" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input id="signupEmail" name="email" type="email" placeholder="john.doe@example.com" 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" 
+                           required>
+                </div>
+
+                <div class="space-y-2">
+                    <label for="signupPassword" class="block text-sm font-medium text-gray-700">Password</label>
+                    <input id="signupPassword" name="password" type="password" placeholder="Create a password" 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" 
+                           required>
+                </div>
+
+                <div class="space-y-2">
+                    <label for="confirmPassword" class="block text-sm font-medium text-gray-700">Confirm Password</label>
+                    <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm your password" 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" 
+                           required>
+                </div>
+
+                <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105">
+                    Create Account
+                </button>
+            </form>
+
+            <div class="mt-6 text-center">
+                <p class="text-sm text-gray-600 mb-4">
+                    Already have an account?
+                </p>
+                <button onclick="openLoginModal()" class="w-full border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white py-2 px-4 rounded-lg transition-all duration-300">
+                    Back to Login
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    
+
+    
+</body>
+</html>

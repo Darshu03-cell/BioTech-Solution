@@ -1,0 +1,353 @@
+/* Base animations and transitions */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Navigation animations */
+.nav-animate {
+    animation: slideDown 0.6s ease-out;
+}
+
+.logo-animate {
+    animation: slideInLeft 0.6s ease-out 0.3s both;
+}
+
+.nav-items-animate {
+    animation: slideInUp 0.6s ease-out 0.4s both;
+}
+
+.auth-buttons-animate {
+    animation: slideInRight 0.6s ease-out 0.6s both;
+}
+
+/* Hero section animations */
+.hero-content {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-title {
+    animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.hero-subtitle {
+    animation: slideInLeft 0.8s ease-out 0.6s both;
+}
+
+.hero-description {
+    animation: fadeInUp 0.8s ease-out 0.8s both;
+}
+
+.hero-buttons {
+    animation: fadeInUp 0.8s ease-out 1s both;
+}
+
+/* DNA Helix Animation */
+.dna-helix {
+    animation: rotate 30s linear infinite;
+}
+
+.dna-path-1 {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation: drawPath 3s ease-in-out infinite;
+}
+
+.dna-path-2 {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation: drawPath 3s ease-in-out 1.5s infinite;
+}
+
+/* Molecule animations */
+.molecule-1 {
+    left: 20%;
+    top: 30%;
+    animation: float 4s ease-in-out infinite;
+}
+
+.molecule-2 {
+    left: 35%;
+    top: 50%;
+    animation: float 5s ease-in-out 0.5s infinite;
+}
+
+.molecule-3 {
+    left: 50%;
+    top: 30%;
+    animation: float 6s ease-in-out 1s infinite;
+}
+
+.molecule-4 {
+    left: 65%;
+    top: 60%;
+    animation: float 4.5s ease-in-out 1.5s infinite;
+}
+
+.molecule-5 {
+    left: 80%;
+    top: 40%;
+    animation: float 5.5s ease-in-out 2s infinite;
+}
+
+.molecule-6 {
+    left: 95%;
+    top: 70%;
+    animation: float 4.8s ease-in-out 2.5s infinite;
+}
+
+/* Gradient wave animation */
+.gradient-wave {
+    animation: wave 6s ease-in-out infinite;
+}
+
+/* Scroll indicator animation */
+.scroll-indicator {
+    animation: fadeIn 0.8s ease-out 1.5s both;
+}
+
+.scroll-indicator > div {
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.scroll-dot {
+    animation: scrollDot 2s ease-in-out infinite;
+}
+
+/* Section animations */
+.section-animate {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.about-content {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.about-image {
+    animation: slideInRight 0.8s ease-out;
+}
+
+.research-card {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.research-card:nth-child(1) { animation-delay: 0s; }
+.research-card:nth-child(2) { animation-delay: 0.1s; }
+.research-card:nth-child(3) { animation-delay: 0.2s; }
+.research-card:nth-child(4) { animation-delay: 0.3s; }
+
+.product-card {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.product-card:nth-child(1) { animation-delay: 0s; }
+.product-card:nth-child(2) { animation-delay: 0.2s; }
+.product-card:nth-child(3) { animation-delay: 0.4s; }
+
+/* Modal animations */
+.modal-content {
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+/* Keyframes */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes drawPath {
+    0% {
+        stroke-dashoffset: 200;
+    }
+    50% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 200;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px) scale(1);
+    }
+    25% {
+        transform: translateY(-20px) translateX(10px) scale(1.2);
+    }
+    50% {
+        transform: translateY(0px) translateX(0px) scale(1);
+    }
+    75% {
+        transform: translateY(20px) translateX(-10px) scale(1.2);
+    }
+}
+
+@keyframes wave {
+    0%, 100% {
+        background: linear-gradient(to top, rgba(59, 130, 246, 0.1), transparent);
+    }
+    50% {
+        background: linear-gradient(to top, rgba(16, 185, 129, 0.1), transparent);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes scrollDot {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(12px);
+    }
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Hover effects */
+.nav-item:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to right, #3B82F6, #10B981);
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-description {
+        font-size: 1.2rem;
+    }
+    
+    .grid.md\\:grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid.lg\\:grid-cols-4 {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid.lg\\:grid-cols-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #3B82F6, #10B981);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #2563EB, #059669);
+}
